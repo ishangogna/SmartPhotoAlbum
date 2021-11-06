@@ -1,0 +1,86 @@
+<!DOCTYPE html5>
+
+<head>
+    <meta charset="utf-8">
+    <title>AWS Photo Album</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
+<!--    <link rel="stylesheet" href="styles.css">-->
+    <link rel="stylesheet" href="style1.css">
+	
+    
+	<!-- Smart Photo Album code -->
+    
+    
+</head>
+
+<body bgcolor="#DAF7A6">
+    <center>
+        <h1>
+            AWS Photo Album
+        </h1>
+
+
+        <div class="container">
+
+        <div id="error" class="isa_error"></div>
+
+            <input style="width: 75%;" id='transcript' type='text'/>
+        <div class="row">
+            <div class="col">
+                <button id="start-button" class="button-xl" title="Start">
+                    <i class="fa fa-microphone"></i> TurnonMic
+                </button>
+                <button id="stop-button" class="button-xl" title="Stop" disabled="true"><i
+                        class="fa fa-stop-circle"></i> TurnoffMic
+                </button>
+                <button id="reset-button" class="button-xl button-secondary" title="Clear Transcript">
+                    Clear Transcript
+                </button>
+                <button onclick="search()" class="button" type="button">Search Pictures</button>
+            </div>
+        </div>
+    </div>
+
+        <div class="buttons">
+            <input type="file" id="realfile" onchange="previewFile(this);" hidden="hidden"/>
+
+            <input style="width: 75%;" id='label' type='text'/>
+            <button onclick="upload()" class="button" type="button">Upload Pictures</button>
+
+        </div>
+        <div class="container" id="images">
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script src="dist/main.js"></script>
+        <script src="index.js"></script>
+        <script src="lib/audioUtils.js"></script>
+        <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+	
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.179.0.min.js"></script>
+	<script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+	<script type="text/javascript" src="lib/url-template/url-template.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+
+        
+    </center>
+    
+</body>
+
+</html>
